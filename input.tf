@@ -30,3 +30,12 @@ variable "min_count" {
 variable "max_count" {
   type = number
 }
+
+variable "vnet_subnet_id" {
+  type    = string
+  default = null
+}
+
+variable "zones" {
+  type = list(number)
+}
