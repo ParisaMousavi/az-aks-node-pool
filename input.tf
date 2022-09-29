@@ -18,3 +18,15 @@ variable "additional_tags" {
   default = {}
   type    = map(string)
 }
+
+variable "enable_auto_scaling" {
+  type = bool
+}
+
+variable "min_count" {
+  type = number
+}
+
+variable "max_count" {
+  type = number
+}
