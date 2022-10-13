@@ -8,6 +8,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "this" {
   max_count             = var.max_count
   vnet_subnet_id        = var.vnet_subnet_id
   zones                 = var.zones
+  os_type               = var.os_type
   tags = merge(
     var.additional_tags,
     {

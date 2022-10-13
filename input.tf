@@ -39,3 +39,8 @@ variable "vnet_subnet_id" {
 variable "zones" {
   type = list(number)
 }
+
+variable "os_type" {
+  type = string
+  default = "Linux"
+}
