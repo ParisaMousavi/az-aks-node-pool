@@ -41,6 +41,6 @@ variable "zones" {
 }
 
 variable "os_type" {
-  type = string
+  type    = string
   default = "Linux"
 }
