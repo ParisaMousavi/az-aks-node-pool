@@ -45,7 +45,7 @@ variable "os_type" {
   default = "Linux"
 }
 
-variable "scale_down_mode " {
+variable "scale_down_mode" {
   type    = string
   default = "Delete"
   validation {
