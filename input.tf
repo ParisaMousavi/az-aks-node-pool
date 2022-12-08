@@ -44,3 +44,12 @@ variable "os_type" {
   type    = string
   default = "Linux"
 }
+
+variable "scale_down_mode " {
+  type    = string
+  default = "Delete"
+  validation {
+    condition     = contains(["Delete", "Deallocate"], var.scale_down_mode)
+    error_message = "The valid values are Delete or Deallocate."
+  }
+}

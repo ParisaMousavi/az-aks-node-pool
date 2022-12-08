@@ -9,6 +9,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "this" {
   vnet_subnet_id        = var.vnet_subnet_id
   zones                 = var.zones
   os_type               = var.os_type
+  scale_down_mode       = var.scale_down_mode
   tags = merge(
     var.additional_tags,
     {
