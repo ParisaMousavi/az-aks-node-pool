@@ -11,7 +11,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "this" {
   os_type               = var.os_type
   scale_down_mode       = var.scale_down_mode
   node_labels = {
-    jhfjsfk = asjdjkak
+    jhfjsfk = "asjdjkak"
   }
   tags = merge(
     var.additional_tags,
