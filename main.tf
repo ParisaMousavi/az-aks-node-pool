@@ -10,9 +10,15 @@ resource "azurerm_kubernetes_cluster_node_pool" "this" {
   zones                 = var.zones
   os_type               = var.os_type
   scale_down_mode       = var.scale_down_mode
-  node_labels = {
-    jhfjsfk = "asjdjkak"
-  }
+
+  # Reference page: https://learn.microsoft.com/en-us/azure/aks/use-labels
+  node_labels = merge(
+    var.node_labels,
+    {
+      created-by = "iac-tf",
+      type       = "user-pool"
+    },
+  )
   tags = merge(
     var.additional_tags,
     {

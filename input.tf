@@ -53,3 +53,8 @@ variable "scale_down_mode" {
     error_message = "The valid values are Delete or Deallocate."
   }
 }
+
+variable "node_labels" {
+  default = {}
+  type    = map(string)
+}
